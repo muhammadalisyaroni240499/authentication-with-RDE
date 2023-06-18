@@ -1,0 +1,45 @@
+.form-registration {
+    background-color: rgba(255, 255, 255, 1);
+    margin: 0;
+    padding: 6%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.form-signin {
+    background-color: rgba(255, 255, 255, 1);
+    margin: 0;
+    padding: 4%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.cont-custom {
+    margin-top: 5%;
+    height: 100%;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.form-signin .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.form-registration input {
+    border-radius: 0;
+    margin-bottom: 3px;
+}
