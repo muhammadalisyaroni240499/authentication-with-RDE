@@ -8,9 +8,8 @@
 </div>    
 @endif
 
-<div class="row justify-content-center align-middle">
-    <div class="col-lg-6">
-        <div class="cont-custom" style="height: 70%; margin-top: 25%">
+<div class="row-md justify-content-center">
+    <div class="col-md-6">
             <main class="form-signin">
                 <form action="/login" method="POST" enctype="multipart/form-data">
                     @csrf
@@ -37,7 +36,6 @@
                     </a>
                 </small>
             </main>
-        </div>
     </div>
 </div>
 
