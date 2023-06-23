@@ -34,7 +34,7 @@
     <title>{{ $tittle_page }}</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container" style="height: 100%">
         @yield('container')
     </div>
     
