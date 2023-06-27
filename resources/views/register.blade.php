@@ -1,12 +1,11 @@
 @extends('layouts')
 
 @section('container')    
-<div class="row justify-content-center align-middle">
+<div class="row align-items-center justify-content-md-center" style="height: 100vh">
     <div class="col-lg-7">
         <div class="cont-custom">
             <main class="form-registration">
-                <h1 class="h3 fw-normal text-center">Form Pendaftaran</h1>
-                
+                <p class="h2 fw-bold text-center">DAFTAR</p>
                 <form action="/register" method="POST">
                     @csrf
                     <div class="form-floating">
@@ -87,11 +86,11 @@
                                     <div class="row">
                                         @foreach ($coverimage as $cover)
                                         <div class="col-sm-4">
-                                            <div class="card mb-3" style="width: 14rem;">
+                                            <div class="card mb-3">
                                                 <div class="custom-control custom-radio image-checkbox">
                                                     <input type="radio" class="custom-control-input" id="coverimage{{ $cover->id }}" name="coverimage" value="{{ $cover->id }}">
                                                     <label class="custom-control-label" for="coverimage{{ $cover->id }}">
-                                                        <img src="{{ asset('storage/'.$cover->url_lokal) }}" alt="#" class="img-fluid">
+                                                        <img src="{{ asset('storage/'.$cover->url_lokal) }}" alt="{{ asset('storage/'.$cover->url_lokal) }}" class="img-fluid">
                                                     </label>
                                                     
                                                     {{-- <input type="hidden" name="slug_coverimage" id="slug_coverimage" value="{{ uniqid($cover->slug, true) }}"> --}}
@@ -108,14 +107,17 @@
                             </div>
                         </div>
                     </div>
-                    
                     <button class="w-100 btn btn-lg btn-primary mt-4" type="submit">Daftar</button>
                 </form>
-                <small class="d-block text-center mt-3">Sudah daftar?
+                <br>
+                <div class="row justify-content-md-center mt-2">
+                    <small class="text-center mb-2">Sudah daftar?</small>
+                    <h6 class="text-center">
                     <a href="/login">
                         <span class="badge bg-info text-dark">Masuk</span>
                     </a>
-                </small>
+                    </h6>
+                </div>
             </main>
         </div>
     </div>

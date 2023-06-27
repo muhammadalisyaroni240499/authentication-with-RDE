@@ -10,12 +10,11 @@
 </div>    
 @endif
 
-<div class="row justify-content-center align-middle">
+<div class="row align-items-center justify-content-md-center" style="height: 100vh">
     <div class="col-lg-7">
         <div class="cont-custom">
             <main class="form-registration">
-                <h1 class="h3 fw-normal text-center">Update Cover Image</h1>
-                
+                <p class="h4 fw-bold text-center mb-3">PEMULIHAN COVER IMAGE</p>
                 <form action="/sendLink" method="POST">
                     @csrf
                     <div class="form-floating">
@@ -55,7 +54,13 @@
                         </div>
                     <button class="w-100 btn btn-lg btn-primary mt-4" type="submit">Selanjutnya</button>
                 </form>
-                <small class="d-block text-center mt-3">sudah punya stego image <a href="/login">Masuk</a></small>
+                <br>
+                    <small class="text-center mb-2 mt-4">Sudah punya stego image?</small>
+                    <h6 class="text-center">
+                    <a href="/login">
+                        <span class="badge bg-info text-dark">Masuk</span>
+                    </a>
+                    </h6>
             </main>
         </div>
     </div>
