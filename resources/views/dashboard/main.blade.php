@@ -10,6 +10,12 @@
 
 <div class="header">
     <div class="container">
+        <div class="text-center d-lg-none">
+            @php
+            use App\Models\CoverImage;
+            @endphp
+            <img class="mx-auto" src="/img/bg.jpg" alt="Gembok" width="55%">
+        </div>
         <div class="vw-90 mx-auto text-break d-flex flex-row">
             <div class="vw-100 mt-5">
                 <h1 class="fw-bold mb-1 ">SELAMAT DATANG</h1>
@@ -28,11 +34,8 @@
                     <button type="submit" class="btn btn-outline-primary" disabled>download</button>
                 @endif
             </div>
-            <div class="vw-100 d-flex justify-content-center">
-                @php
-                use App\Models\CoverImage;
-                @endphp
-                <img class="mx-auto" src="/img/bg.jpg" alt="Gembok" width="55%">
+            <div class="vw-100 d-flex justify-content-center d-none d-lg-block">
+                <img class="mx-auto" src="/img/bg.jpg" alt="Gembok" width="50%">
             </div>
         </div>
     </div>
@@ -41,14 +44,14 @@
 <div class="list-coverdata">
     <h4 class="text-center" style="color: white">LIST COVER IMAGE</h4>
     
-    <div class="container" style="width: 80%">
+    <div class="container">
         <div class="row row-cols-1 row-cols-md-3 g-4">
             @php
             $coverdata = CoverImage::all();
             @endphp
             
             @foreach ($coverdata as $cD)
-            <div class="col-4">
+            <div class="col">
                 <div class="card h-20">
                     <img src="/storage/{{ $cD->url_lokal }}" class="card-img-top" alt="{{ $cD->url_lokal }}">
                     <div class="card-body">
