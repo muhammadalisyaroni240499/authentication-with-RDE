@@ -40,13 +40,13 @@
                     @endphp
                     
                     @foreach ($coverdata as $cD)
-                    <div class="col-4">
+                    <div class="col col-lg-4">
                         <div class="card h-10">
                             <img src="/storage/{{ $cD->url_lokal }}" class="card-img-top" alt="{{ $cD->url_lokal }}">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $cD->namagambar }}</h5>
                                 <small>
-                                    <table class="table table-striped">
+                                    <table class="table-lg table-striped">
                                         <thead>
                                             <tr>
                                                 <th scope="col">#</th>
