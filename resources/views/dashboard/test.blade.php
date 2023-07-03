@@ -14,7 +14,7 @@
                 <form action="/dashboard/test/fidelity" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3 mt-4">
-                        <label for="formFile" class="form-label">Cover image</label>
+                        <label for="formFile" class="form-label">Stego image</label>
                         <input class="form-control" type="file" id="formFile" name="coverimage">
                     </div>
                     @php
@@ -46,7 +46,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">{{ $cD->namagambar }}</h5>
                                 <small>
-                                    <table class="table-lg table-striped">
+                                    <table class="table-responsive-sm table-striped">
                                         <thead>
                                             <tr>
                                                 <th scope="col">#</th>
